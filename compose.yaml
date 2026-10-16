@@ -1,0 +1,11 @@
+services:
+  discord-bot:
+    build: .
+    container_name: discord-bot
+    restart: unless-stopped
+    environment:
+      APP_ID: ${APP_ID}
+      DISCORD_TOKEN: ${DISCORD_TOKEN}
+      PUBLIC_KEY: ${PUBLIC_KEY}
+      GUILD_TEST_ID: ${GUILD_TEST_ID}
+      DEVELOPPER_ID: ${DEVELOPPER_ID}
