@@ -9,11 +9,9 @@ if (os != "win32") dbPath = "/var/run/mysqld/mysqld.sock";
 export class discordbot_Database {
   constructor() {
     this.db = mysql.createConnection({
-      host: "localhost",
-      port: 3306,
+      host: "mysql_database",
       user: "root",
       password: "",
-      port: dbPath,
       database: "discordbot_db",
       supportBigNumbers: true,
     });
